@@ -1,0 +1,155 @@
+/* ===============================
+   SECURITY SECTION WRAPPER
+================================ */
+.security-wrapper {
+  padding: 120px 100px;
+  text-align: center;
+  background: #ffffff;
+  margin-right: 140vh;
+}
+
+/* ===============================
+   SECURITY TAG
+================================ */
+.security-tag {
+  display: inline-block;
+  background: #ecfdf5;
+  color: #30b654;
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   MAIN HEADING
+================================ */
+.security-heading {
+  margin-top: 40px;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.security-heading span {
+  background: linear-gradient(90deg, #30b654, #5be584);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   SUBTITLE
+================================ */
+.security-subtitle {
+  margin-top: 18px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #444444;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===============================
+   GRID LAYOUT
+================================ */
+.security-grid {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 580px);
+  gap: 53px 80px;
+  justify-content: center;
+}
+
+/* ===============================
+   SECURITY CARD
+================================ */
+.security-card {
+  display: flex;
+  gap: 24px;
+  padding: 26px;
+  width: 580px;
+  height: 164px;
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 7px 4px 4px rgba(72, 131, 56, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* ===============================
+   ICON BOX
+================================ */
+.security-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #30b654, #5be584);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 42px;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   TEXT CONTENT
+================================ */
+.security-text {
+  text-align: left;
+}
+
+.security-text h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #000000;
+}
+
+.security-text p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #555555;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 1200px) {
+  .security-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .security-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .security-wrapper {
+    padding: 80px 20px;
+  }
+
+  .security-heading {
+    font-size: 36px;
+  }
+
+  .security-subtitle {
+    font-size: 18px;
+  }
+
+  .security-card {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .security-text {
+    text-align: center;
+  }
+}

@@ -72,8 +72,8 @@ const Navbar = () => {
         </li>
 
         <li
-          className={active === "Contact" ? "active" : ""}
-          onClick={() => scrollTo("Contact")}
+          className={active === "/contact" ? "active" : ""}
+          onClick={() => navigate("/contact")}
         >
           Contact Us
         </li>

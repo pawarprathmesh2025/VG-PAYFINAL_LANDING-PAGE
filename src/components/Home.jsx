@@ -5,6 +5,8 @@ import DevicesSection from "../components/DevicesSection";
 import Features from "../components/Features";
 import Services from "../components/Services";
 import UserSection from "../components/UserSection";
+import Security from "../components/Security";
+
 import DownloadFooter from "../components/DownloadFooter";
 
 const Home = () => {
@@ -27,11 +29,15 @@ const Home = () => {
 
       <Services />
         <UserSection />
+        <Security />
 
 
-      <section id="Contact">
+      {/* <section id="Contact"> */}
+          
+      
+        
         {/* Contact component here */}
-      </section>
+      {/* </section> */}
         <DownloadFooter />
 
     </>

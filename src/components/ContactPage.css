@@ -1,0 +1,93 @@
+.contact-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 20px;
+  text-align: center;
+  background: #ffffff;
+  margin-left: -500px;
+
+}
+
+/* TITLE */
+.title {
+  
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+}
+
+.title span {
+  color: #69d63e;
+}
+
+/* SUBTITLE */
+.subtitle {
+  margin-top: 70px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* GRID FIX */
+.cards-grid {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 420px));
+  gap: 60px;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 50px 35px;
+  box-shadow: 0 20px 40px rgba(105, 214, 62, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(105, 214, 62, 0.45);
+}
+
+/* ICON */
+.icon {
+  font-size: 56px;
+  color: #69d63e;
+  margin-bottom: 22px;
+}
+
+/* ICON FLOAT */
+.bounce {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* TEXT */
+.card h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.card p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card span {
+  font-size: 18px;
+  color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
