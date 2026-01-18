@@ -28,6 +28,11 @@ const Navbar = () => {
     }
   };
 
+  const goToPage = (path) => {
+    setActive(""); // ✅ clear scroll active
+    navigate(path);
+  };
+
   return (
     <motion.nav
       initial={{ y: -80 }}
@@ -36,11 +41,10 @@ const Navbar = () => {
       className="navbar"
     >
       {/* LOGO */}
-      <div className="logo" onClick={() => navigate("/")}>
+      <div className="logo" onClick={() => goToPage("/")}>
         <img src="/devices/app-logo 1.png" alt="VG PAY Logo" />
       </div>
 
-      {/* MENU */}
       <ul>
         <li
           className={active === "home" ? "active" : ""}
@@ -63,17 +67,16 @@ const Navbar = () => {
           Our Devices
         </li>
 
-        {/* ROUTED ABOUT PAGE */}
         <li
           className={location.pathname === "/about" ? "active" : ""}
-          onClick={() => navigate("/about")}
+          onClick={() => goToPage("/about")}
         >
           About Us
         </li>
 
         <li
-          className={active === "/contact" ? "active" : ""}
-          onClick={() => navigate("/contact")}
+          className={location.pathname === "/contact" ? "active" : ""}
+          onClick={() => goToPage("/contact")}
         >
           Contact Us
         </li>
