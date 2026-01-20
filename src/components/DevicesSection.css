@@ -1,13 +1,20 @@
 .devices-wrapper {
-  max-width: 1361px;
-  margin: 0 auto; 
-  padding: 80px 20px 0px;
-  text-align: center;
-   color: #000;
-   margin-right: 1080px;
-   margin-left: 0px;
-    background: #ffffff;
-    
+  width: 100%;                 /* ✅ full width section */
+  padding: 80px 0;
+  text-align: left;
+  color: #000;
+  background: #ffffff;
+  
+    text-align: left;   /* ✅ FIX */
+
+}
+
+.devices-container {
+  max-width: 1200px;
+  margin-left: 0;          /* 🔥 STOP CENTERING */
+  margin-right: auto;
+  padding-left: 150px;      /* aligns with Hero text */
+  padding-right: 20px;
 }
 
 
@@ -20,28 +27,23 @@
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 16px;
+    margin: 0 auto 16px;     /* ✅ center badge */
+
 }
 
 .devices-heading {
   font-size: 36px;
   font-weight: 700;
-  color: black;
-  margin-bottom: 10px;
-   /* font-family: 'K2D', sans-serif; Use K2D font */
-  font-weight: 200px;              /* Semibold */
-  font-size: 36px; 
-  /* margin-left: 0px; */
-  margin-right:-120px ;
+  color: #4caf50; /* matches Figma green */
+  margin-bottom: 12px;
 }
 
 .devices-subheading {
-  color: #333;
   max-width: 600px;
-  margin: 0 auto 56px;   /* ⬅️ ADD SPACE BELOW */
-  /* font-family: 'K2D', sans-serif; Use K2D font */
-  font-weight: 100px;              /* Semibold */
-  font-size: 16px;               /* Add px unit */
-  margin-left: 215px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
 }
 
 
@@ -132,6 +134,8 @@
   max-width: 170px;          /* slightly smaller like Figma */
   max-height: 170px;
   object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
 }
 
 
@@ -186,9 +190,11 @@
 }
 
 .heading {
-  width: 925px;
-  margin: 24px auto 0;
+  max-width: 925px;
+  margin: 24px auto 56px;
+  text-align: center;
 }
+
 
 .bullet-points,
 .bullet-points1 {
@@ -217,7 +223,7 @@
 
 .swiper-slide {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
     height: auto;
 
     /* user-select: none;
@@ -253,7 +259,7 @@
 }
 
 .device-card:hover .device-image img {
-  transform: scale(1.08);
+  transform: scale(1.12) rotate(-1deg);
 }
 
 .device-text,
@@ -299,9 +305,9 @@
 
 
 .devices-badge {
-  margin-bottom: 12px;
+  display: inline-flex;
+  justify-content: flex-start;
 }
-
 
 
 .devices-swiper:active {
@@ -366,6 +372,95 @@
     right: -40px;
   }
 }
+
+
+/* ------------------ */
+/* SCROLL ANIMATIONS */
+/* ------------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+/* CARD ENTRY ANIMATION */
+.swiper-slide {
+  opacity: 0;
+  transform: translateY(30px) scale(0.96);
+  transition: all 0.6s ease;
+}
+
+.swiper-slide-active,
+.swiper-slide-next {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.devices-heading {
+  position: relative;
+}
+
+/* .devices-heading,
+.devices-subheading {
+  margin-left: 0;
+  text-align: left;
+} */
+
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ✅ CENTER ONLY THE BADGE */
+.devices-badge-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* CLEAN badge (remove alignment forcing) */
+.devices-badge {
+  display: inline-flex;
+  justify-content: center; /* text inside badge */
+}
+
+/* ================================
+   FORCE TRUE CENTER (FIGMA MATCH)
+   ================================ */
+
+.heading {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 925px;
+  margin: 24px 0 56px;
+  text-align: center;
+}
+
+.devices-heading {
+  text-align: center;
+}
+
+.devices-subheading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 

@@ -144,10 +144,97 @@
 }
 
 .user-card:hover {
-  transform: translateY(-10px) scale(1.02);
-
+  transform: translateY(-14px) scale(1.03);
   box-shadow:
-    0px 12px 28px rgba(72, 131, 56, 0.18),
-    0px 22px 40px rgba(72, 131, 56, 0.12);
+    0 20px 40px rgba(60, 158, 96, 0.25),
+    0 10px 18px rgba(60, 158, 96, 0.18);
 }
 
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+
+.slide-left {
+  transform: translateX(-60px) scale(0.96);
+}
+
+.slide-right {
+  transform: translateX(60px) scale(0.96);
+}
+
+.slide-up {
+  transform: translateY(60px) scale(0.96);
+}
+
+.reveal.active.slide-left,
+.reveal.active.slide-right,
+.reveal.active.slide-up {
+  transform: translate(0) scale(1);
+}
+
+
+.user-icon {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.user-card:hover .user-icon {
+  transform: scale(1.15) rotate(-3deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+.stagger-list li {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: listFade 0.6s ease forwards;
+}
+
+.reveal.active .stagger-list li {
+  animation-name: listFade;
+}
+
+.stagger-list li:nth-child(1) { animation-delay: 0.15s; }
+.stagger-list li:nth-child(2) { animation-delay: 0.3s; }
+.stagger-list li:nth-child(3) { animation-delay: 0.45s; }
+.stagger-list li:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes listFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(60, 158, 96, 0.12),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.user-card:hover::before {
+  opacity: 1;
+}
