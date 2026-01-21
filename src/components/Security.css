@@ -2,35 +2,32 @@
    SECURITY SECTION WRAPPER
 ================================ */
 .security-wrapper {
-  padding: 120px 100px;
-  text-align: center;
+  padding: 110px 80px;
   background: #ffffff;
-  margin-right: 140vh;
+  text-align: center;
 }
 
 /* ===============================
-   SECURITY TAG
+   TAG
 ================================ */
 .security-tag {
   display: inline-block;
   background: #ecfdf5;
   color: #30b654;
-  padding: 10px 28px;
+  padding: 8px 22px;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
 /* ===============================
-   MAIN HEADING
+   HEADING
 ================================ */
 .security-heading {
-  margin-top: 40px;
-  font-size: 50px;
+  margin-top: 32px;
+  font-size: 46px;
   font-weight: 700;
   line-height: 1.2;
-  color: #000000;
 }
 
 .security-heading span {
@@ -43,109 +40,103 @@
    SUBTITLE
 ================================ */
 .security-subtitle {
-  margin-top: 18px;
-  font-size: 24px;
-  font-weight: 400;
-  color: #444444;
-  max-width: 780px;
+  margin-top: 16px;
+  font-size: 20px;
+  color: #555;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* ===============================
+   GRID (RESPONSIVE & SAFE)
+================================ */
+.security-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* ===============================
-   GRID LAYOUT
-================================ */
-.security-grid {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(2, 580px);
-  gap: 53px 80px;
-  justify-content: center;
-}
-
-/* ===============================
-   SECURITY CARD
+   CARD
 ================================ */
 .security-card {
   display: flex;
-  gap: 24px;
-  padding: 26px;
-  width: 580px;
-  height: 164px;
-  border-radius: 30px;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 24px;
   background: #ffffff;
-  box-shadow: 7px 4px 4px rgba(72, 131, 56, 0.15);
+  box-shadow: 0 12px 28px rgba(72, 131, 56, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+}
+
+.security-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(72, 131, 56, 0.25);
 }
 
 /* ===============================
-   ICON BOX
+   ICON (REDUCED)
 ================================ */
 .security-icon {
-  width: 90px;
-  height: 90px;
+  width: 64px;
+  height: 64px;
   background: linear-gradient(135deg, #30b654, #5be584);
-  border-radius: 18px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 28px;
   color: #ffffff;
-  font-size: 42px;
   flex-shrink: 0;
 }
 
 /* ===============================
-   TEXT CONTENT
+   TEXT
 ================================ */
 .security-text {
   text-align: left;
 }
 
 .security-text h3 {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 12px;
-  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
 .security-text p {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #555555;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* ===============================
-   RESPONSIVE DESIGN
+   MOBILE
 ================================ */
-@media (max-width: 1200px) {
-  .security-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .security-card {
-    width: 100%;
-  }
-}
-
 @media (max-width: 768px) {
   .security-wrapper {
-    padding: 80px 20px;
+    padding: 80px 22px;
   }
 
   .security-heading {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .security-subtitle {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .security-card {
     flex-direction: column;
-    height: auto;
-    align-items: center;
+    align-items: fe;
     text-align: center;
   }
 

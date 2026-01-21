@@ -1,13 +1,16 @@
-import ContactPage from "../components/ContactPage";
-import ContactForm from "../components/ContactForm";
+// import ContactPage from "../components/ContactPage";
+// import ContactForm from "../components/ContactForm";
 import DownloadFooter from "../components/DownloadFooter";
+import ContactPg from "../components/ContactPg";
 
 const Contact = () => {
   return (
     <>
-      <ContactPage />
-        <ContactForm />
+      {/* <ContactPage />
+        <ContactForm /> */}
+         <ContactPg/>
       <DownloadFooter />
+     
     </>
   );
 };
